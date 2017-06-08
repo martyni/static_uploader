@@ -20,9 +20,9 @@ class static_uploader(object):
             sys.exit(0)
 
     def help(self):
-        print '''
+        print('''
 Usage: {}: <s3_bucket> <project> <env> <path>
-'''.format(sys.argv[0])
+'''.format(sys.argv[0]))
 
     def put_files(self):
         try:
@@ -35,7 +35,7 @@ Usage: {}: <s3_bucket> <project> <env> <path>
         for c in "html", "css":
             if c in path:
                 content = "text/{}".format(c)
-        print "{bucket}.s3-website.eu-west-2.amazonaws.com/{key}".format(key = key, bucket=self.s3_bucket)
+        print("{bucket}.s3-website.eu-west-2.amazonaws.com/{key}".format(key = key, bucket=self.s3_bucket))
         client.upload_file(path, self.s3_bucket, key, ExtraArgs={'ACL': 'public-read','ContentType': content})
 
 
