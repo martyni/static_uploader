@@ -13,7 +13,7 @@ pipeline {
                 echo 'Testing..'
                 sh 'pwd'
                 sh 'bash jenkins/setup.sh'
-                sh 'bash jenkins/test.sh http://localhost:5000'
+                sh 'bash jenkins/test.sh init'
             }
         }
         stage('Deploy Dev') {

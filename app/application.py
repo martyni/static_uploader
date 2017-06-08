@@ -17,7 +17,7 @@ class static_uploader(object):
             self.key_prefix = "{}/{}/".format(self.project,self.env)
         except:
             self.help()
-            sys.exit(1)
+            sys.exit(0)
 
     def help(self):
         print '''
@@ -35,9 +35,7 @@ Usage: {}: <s3_bucket> <project> <env> <path>
         for c in "html", "css":
             if c in path:
                 content = "text/{}".format(c)
-                print content
-        print "Uploading {path} to {bucket}.s3-website.eu-west-2.amazonaws.com/{key}".format(key = key, bucket=self.s3_bucket, path=path)
-        print {'ACL': 'public-read','ContentType': content}
+        print "{bucket}.s3-website.eu-west-2.amazonaws.com/{key}".format(key = key, bucket=self.s3_bucket)
         client.upload_file(path, self.s3_bucket, key, ExtraArgs={'ACL': 'public-read','ContentType': content})
 
 
