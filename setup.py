@@ -7,7 +7,7 @@ install_reqs = parse_requirements('requirements.txt', session=False)
 reqs = [ str(i.req) for i in install_reqs ]
 
 setup(name='static_static',
-      version="v0.0.4",
+      version="v0.0.5",
       description='simple s3 file uploader',
       url='http://github.com/martyni/static_uploader',
       author='martyni',
