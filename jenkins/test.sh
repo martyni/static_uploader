@@ -11,9 +11,10 @@ fi
 
 #Upload file and check it's contents is accessible
 echo $RANDOM > upload.html
-file_contents=curl $(s3_static martyn-static jenkins $env upload.html)
-if [ "$file_contents"=="$(cat upload.html)" ]
-   then echo success
+url=$(s3_static martyni-static jenkins $env upload.html)
+file_contents=$(curl $url)
+if [ $file_contents=="$(cat upload.html)" ]
+   then echo success && echo $file_contents $url
    else echo fail && failed=1
 fi
 
