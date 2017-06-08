@@ -1,0 +1,11 @@
+MANIFEST.in
+setup.cfg
+app/__init__.py
+app/application.py
+static_static.egg-info/PKG-INFO
+static_static.egg-info/SOURCES.txt
+static_static.egg-info/dependency_links.txt
+static_static.egg-info/entry_points.txt
+static_static.egg-info/not-zip-safe
+static_static.egg-info/requires.txt
+static_static.egg-info/top_level.txt

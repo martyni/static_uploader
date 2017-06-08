@@ -1,0 +1,12 @@
+../app/application.py
+../app/__init__.py
+../app/application.pyc
+../app/__init__.pyc
+not-zip-safe
+requires.txt
+entry_points.txt
+PKG-INFO
+SOURCES.txt
+dependency_links.txt
+top_level.txt
+../../../../bin/s3_static

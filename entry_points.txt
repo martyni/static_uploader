@@ -1,0 +1,3 @@
+[console_scripts]
+s3_static = app:app.put_files
+
