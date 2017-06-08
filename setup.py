@@ -17,7 +17,7 @@ setup(name='app',
       packages=['app'],
       zip_safe=False,
       entry_points = {
-               'console_scripts': ['boop=app:app.run'],
+               'console_scripts': ['s3_static=app:app.put_files'],
                   },
       include_package_data=True
       )

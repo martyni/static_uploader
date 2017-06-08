@@ -14,7 +14,6 @@ pipeline {
                 sh 'pwd'
                 sh 'bash jenkins/setup.sh'
                 sh 'bash jenkins/test.sh http://localhost:5000'
-                sh 'bash jenkins/tear_down.sh'
                 sh 'kill $(cat /tmp/PID) || exit $(cat /tmp/EXIT)'
                 sh 'rm /tmp/PID && rm /tmp/EXIT'
             }
