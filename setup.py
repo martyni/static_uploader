@@ -6,7 +6,7 @@ install_reqs = parse_requirements('requirements.txt', session=False)
 
 reqs = [ str(i.req) for i in install_reqs ]
 
-setup(name='app',
+setup(name='static_uploader',
       version="v0.0.4",
       description='app',
       url='http://github.com/martyni/jenkins_test',
