@@ -25,7 +25,7 @@ pipeline {
         stage('Test Dev') {
             steps {
                 echo 'Testing.. Dev'
-                sh 'bash jenkins/test.sh $(cat url)'
+                sh 'bash jenkins/test.sh dev'
                 sh 'exit $(cat /tmp/EXIT)'
             }
         }
@@ -38,7 +38,7 @@ pipeline {
         stage('Test Stage') {
             steps {
                 echo 'Testing.. stge'
-                sh 'bash jenkins/test.sh $(cat url)'
+                sh 'bash jenkins/test.sh stge'
                 sh 'exit $(cat /tmp/EXIT)'
             }
         }
@@ -46,13 +46,12 @@ pipeline {
             steps {
                 echo 'Deploying....'
                 sh 'bash jenkins/deploy.sh prod'
-                sh 'cat url'
             }
         }
         stage('Test Prod') {
             steps {
                 echo 'Testing.. stge'
-                sh 'bash jenkins/test.sh $(cat url)'
+                sh 'bash jenkins/test.sh prod'
                 sh 'exit $(cat /tmp/EXIT)'
             }
         }
