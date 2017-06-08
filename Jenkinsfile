@@ -20,7 +20,6 @@ pipeline {
             steps {
                 echo 'Deploying....'
                 sh 'bash jenkins/deploy.sh dev'
-                sh 'cat url'
             }
         }
         stage('Test Dev') {
@@ -34,7 +33,6 @@ pipeline {
             steps {
                 echo 'Deploying....'
                 sh 'bash jenkins/deploy.sh stge'
-                sh 'cat url'
             }
         }
         stage('Test Stage') {
