@@ -1,4 +1,4 @@
-from app import app
+from s3_static import app
 import sys
 
 if __name__ == "__main__":

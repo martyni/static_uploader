@@ -1,7 +1,7 @@
-../app/application.py
-../app/__init__.py
-../app/application.pyc
-../app/__init__.pyc
+../s3_static/application.py
+../s3_static/__init__.py
+../s3_static/application.pyc
+../s3_static/__init__.pyc
 not-zip-safe
 requires.txt
 entry_points.txt
