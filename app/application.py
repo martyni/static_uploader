@@ -31,10 +31,11 @@ Usage: {}: <s3_bucket> <project> <env> <path>
             self.help()
             sys.exit(1)
         key = self.key_prefix + path
-        content = None
         for c in "html", "css":
             if c in path:
                 content = "text/{}".format(c)
+            else:
+                content = "binary/octet-stream" 
         print("{bucket}.s3-website.eu-west-2.amazonaws.com/{key}".format(key = key, bucket=self.s3_bucket))
         client.upload_file(path, self.s3_bucket, key, ExtraArgs={'ACL': 'public-read','ContentType': content})
 
